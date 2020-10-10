@@ -1,0 +1,21 @@
+// config how babel behaves
+
+// write in json
+
+// bust be dobule quote " 
+{
+    "presets": [ // name and config
+        [ 
+            "@babel/preset-env", 
+            { 
+                "targets": {
+                    "browsers": ["> 1% ", "last 2 versions"] // config so it runs in these kidns of browsers
+                }
+            }
+        ],
+        "@babel/preset-react" // doesnt need configs so just string
+    ],
+    "plugins": [
+        "@babel/plugin-proposal-class-properties"
+    ]
+}
