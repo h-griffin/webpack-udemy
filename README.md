@@ -1,4 +1,9 @@
-udemy webpack set up
+# udemy webpack set up - create-react-app under the hood
+## not working - syntax change since time of lecture
+
+## Useful Resources & Links
+- [Webpack Docs:](https://webpack.js.org/concepts/)
+- [More about Babel:](https://babeljs.io/)
 
 # workflow
 
@@ -40,7 +45,7 @@ write new script for `npm start`
 ```
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server"                <<<<                
+    "start": "webpack-dev-server"                <<<                
   },
 ```
 
@@ -74,7 +79,7 @@ needs `webpack.config.js` for it to use
 - tell it how to autoprefix, what kind of browsers were supporting
 ```
   "license": "ISC",
-  "browserslist": "> 1%, last 2 versions",    <<<<
+  "browserslist": "> 1%, last 2 versions",    <<<
   "devDependencies": {
 ```
 
@@ -93,3 +98,18 @@ needs `webpack.config.js` for it to use
 > $ npm install --save-dev file-loader     
 - ^^ url-loader depends on file-loader
 
+**webpack.config.prod.js** 
+
+copy `webpack.config.js` change `mode` and `devtool` 
+
+**package.json**
+
+```
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server",
+    "build:prod": "webpack --config webpack.config.prod.js"        <<<
+  },
+```
+
+> $ npm run build:prod
